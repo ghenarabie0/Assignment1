@@ -1,0 +1,84 @@
+/********
+Q1 
+**Difference between forEach and for...of:**
+
+Both are used to iterate over array elements, but they work differently.
+
+- **forEach:** Is an array method that executes a callback function for each element. It does not support `break` or `continue`.
+- **for...of:** Is a loop that iterates directly over array elements and supports `break` and `continue`.
+
+**When to use each?**
+- Use `forEach` to perform an action on every array element.
+- Use `for...of` when you need more control over the loop.*
+********/
+
+
+//////////////////////////////////////////////////////////////////////
+Q2
+**1. Hoisting:**
+
+Hoisting is a JavaScript behavior where variable and function declarations are processed before code execution.
+
+Example:
+```js
+console.log(x);
+var x = 10;
+```
+Output: `undefined`
+
+**2. Temporal Dead Zone (TDZ):**
+
+TDZ is the period between entering a scope and declaring a variable with `let` or `const`. During this period, the variable cannot be accessed.
+
+Example:
+```js
+console.log(x);
+let x = 10;
+```
+Output: `ReferenceError`
+
+**Difference:** `var` can be accessed before initialization and returns `undefined`, while `let` and `const` cannot be accessed before their declaration.
+
+*/////////////////////////////////////////////////////////////////
+Q3
+**Difference between == and ===:**
+
+- `==` (Loose Equality) compares values and performs Type Conversion if the data types are different.
+- `===` (Strict Equality) compares both values and data types without Type Conversion.
+
+Example:
+```js
+5 == "5"   // true
+5 === "5"  // false
+*//////////////////////////////////////////////////////////////////
+Q4
+**Try-Catch:**
+
+`try-catch` is used to handle errors and prevent the program from stopping unexpectedly.
+
+- `try`: Contains the code that might cause an error.
+- `catch`: Handles the error if one occurs inside the try block.
+
+**Why is it important in async operations?**
+
+It is important because asynchronous operations, such as API requests, may fail. Using `try-catch` with `async/await` helps handle errors safely without crashing the program.
+*////////////////////////////////////////////////////
+Q5
+**Difference between Type Conversion and Type Coercion:**
+
+- **Type Conversion:** Is changing a data type manually using functions like `Number()` or `String()`.
+
+Example:
+```js
+Number("25"); // 25
+```
+
+- **Type Coercion:** Is when JavaScript automatically changes a data type during an operation.
+
+Example:
+```js
+"5" + 2; // "52"
+```
+
+**The main difference:** Type Conversion is done manually, while Type Coercion happens automatically by JavaScript.
+///////////////////////////////////////////////////////////////////
